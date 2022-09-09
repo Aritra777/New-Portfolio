@@ -1,28 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { useParallax } from "react-scroll-parallax";
 
 export default function Banner() {
   // Create reference to store the DOM element containing the animation
-  const el = React.useRef(null);
+  const el = useRef(null);
   // Create reference to store the Typed instance itself
-  const typed = React.useRef(null);
+  const typed = useRef(null);
 
   // For Paralax
-  // const line1 = useParallax({
-  //   speed: 10,
-  //   translateX: ["-280px" , "100px"],
-  // });
   const line1 = useParallax({
     speed: 10,
     translateX: ["250px", "-200px"],
   });
   const line2 = useParallax({
     speed: 10,
-    translateX: ["-200px", "300px"],
+    translateX: ["-220px", "300px"],
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     const options = {
       strings: [
         "Web Developer",
@@ -51,10 +47,10 @@ export default function Banner() {
         <div className="font-bold text-base xl:text-xl text_fill">
          Hii, I am Aritra,
         </div>
-        <div ref={line1.ref} className="sm:text-4xl xl:text-9xl md:text-8xl text-3xl text_fill">
+        <div ref={line1.ref} className="xl:text-9xl md:text-8xl sm:text-[4.5rem] text-5xl text_fill">
           I&apos;m a
         </div>
-        <div ref={line2.ref} className="sm:text-4xl xl:text-9xl md:text-8xl text-3xl text_fill ">
+        <div ref={line2.ref} className="xl:text-9xl md:text-8xl sm:text-[4.5rem] text-5xl text_fill ">
           <span ref={el}>Web Developer</span>
         </div>
         <p className="text-violate-300 pt-8 md:text-xl leading-relaxed">

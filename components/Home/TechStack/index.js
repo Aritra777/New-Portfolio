@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const stacks = [
   {
@@ -94,6 +94,15 @@ const stacks = [
 ];
 
 function TechStack() {
+  const [stacklen, setStacklen] = useState(12)
+  const handleLength = () => {
+    if(stacklen != stacks.length){
+      setStacklen(stacks.length)
+    }
+    else{
+      setStacklen(12)
+    }
+  }
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -102,7 +111,7 @@ function TechStack() {
           <p className="main_heading">Tech Stacks that I am familier with</p>
         </div>
         <div className="flex flex-wrap -m-2">
-          {stacks.map((stack, i) => {
+          {stacks.slice(0,stacklen).map((stack, i) => {
             const { name, area,img } = stack;
             return (
               <div className="p-2 lg:w-1/3 md:w-1/2 w-full" key={i}>
@@ -122,6 +131,7 @@ function TechStack() {
               </div>
             );
           })}
+          <p className="w-full pt-6 text-xs md:text-sm text-center text-mainBg-300 " onClick={handleLength} >{stacklen == stacks.length ? "Show Less..." : "Show All..."}</p>
         </div>
       </div>
     </section>

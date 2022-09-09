@@ -21,9 +21,9 @@ function Navbar() {
 
   return (
     <>
-    <div className={`py-2 fixed backdrop-blur-sm left-0 right-0 top-0 z-[100000] transition-all duration-500 ${
+    <div className={`py-2 fixed backdrop-blur-sm left-0 right-0 top-0 z-[100000] transition-all duration-500 md:text-black text-violate-300 ${
         typeof window !== 'undefined' && scrollPosition >= screen.height - 100
-          ? 'backdrop-blur-md bg-mainBg-800/70 text-violate-300 shadow-md top-0'
+          ? 'backdrop-blur-md bg-mainBg-800/70 md:text-violate-300 shadow-md top-0'
           : ' bg-transparent -top-1000'
       }`}>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">

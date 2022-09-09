@@ -23,6 +23,7 @@ function Contact() {
     emailjs.sendForm(process.env.EMAIL_SERVICE_ID, process.env.EMAIL_TEMPLATE_ID, form.current, process.env.EMAIL_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
+          e.target.reset()
       }, (error) => {
           console.log(error.text);
       });
@@ -30,17 +31,17 @@ function Contact() {
   
   return (
     <div>
-      <section id="contact" className="bg-mainBg-800 text-fadeText body-font h-[100vh] w-full grid md:grid-cols-2 grid-cols-1">
+      <section id="contact" className="bg-mainBg-800 text-fadeText body-font h-[100vh] w-full grid md:grid-cols-2 grid-cols-1 py-8 md:py-0">
         <div className="grid place-items-center">
-            <div className="space-y-8">
+            <div className="md:space-y-8 space-y-3 text-center md:text-left">
           <p className="sub_heading" data-aos="fade-right">Contact</p>
           <p className="main_heading" data-aos="fade-right">Want to go online?</p>
-          <p className="text-base text-fadeText mt-4" data-aos="fade-right">Send me a messege or you can email me at <br/> <Link href="mailto:aritrabiswas123.kulti@gmail.com" ><a> aritrabiswas123.kulti@gmail.com</a></Link> </p>
+          <p className="md:text-base text-xs text-fadeText mt-4" data-aos="fade-right">Send me a messege or you can email me at <br/> <Link href="mailto:aritrabiswas123.kulti@gmail.com" ><a> aritrabiswas123.kulti@gmail.com</a></Link> </p>
             </div>
         </div>
-        <div className="flex justify-center md:pr-10 flex-col gap-4">
+        <div className="flex justify-center md:pr-10 md:px-0 px-6 flex-col gap-4">
         {/* <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"> */}
-            <h2 className="text-fadeText text-3xl mb-1 font-medium title-font">
+            <h2 className="text-fadeText md:text-3xl text-xl mb-1 font-medium title-font">
               Contact
             </h2>
             <form ref={form} onSubmit={sendEmail} >
