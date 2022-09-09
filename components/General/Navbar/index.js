@@ -23,12 +23,12 @@ function Navbar() {
     <>
     <div className={`py-2 fixed backdrop-blur-sm left-0 right-0 top-0 z-[100000] transition-all duration-500 ${
         typeof window !== 'undefined' && scrollPosition >= screen.height - 100
-          ? 'backdrop-blur-md bg-white/70 shadow-md top-0'
+          ? 'backdrop-blur-md bg-mainBg-800/70 text-violate-300 shadow-md top-0'
           : ' bg-transparent -top-1000'
       }`}>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a className="flex title-font font-medium items-center  mb-4 md:mb-0">
-          <span className="ml-3 text-xl">
+          <span className="ml-3 text-xl text_fill">
             <Link href="/" >
             <a>
               Aritra Biswas
@@ -46,19 +46,19 @@ function Navbar() {
           <Link href="#contact">
           <a className="mr-5 hover:text-gray-900">Contact</a>
           </Link>
-        </nav>
         <div className="flex text-xl gap-4">
-          <Link href="#" >
+          <Link href="https://github.com/Aritra777" >
           <a>
             <AiFillGithub />
           </a>
           </Link>
-          <Link href="#" >
+          <Link href="https://www.linkedin.com/in/aritra-biswas-13718b228/" >
           <a>
             <AiFillLinkedin />
           </a>
           </Link>
         </div>
+        </nav>
       </div>
     </div>
     </>

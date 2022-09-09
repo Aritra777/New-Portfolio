@@ -57,7 +57,7 @@ function Work() {
     //     });
     //   }, []);
   return (
-    <div className="mx-auto w-full my-20 relative" id="work">
+    <div className="mx-auto w-full relative" id="work">
       <div className="w-full text-center py-12">
         <p className="sub_heading">Work</p>
         <p className="main_heading">Explore My work</p>

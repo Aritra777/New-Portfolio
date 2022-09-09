@@ -14,3 +14,8 @@
 .swiper_shadow{
     box-shadow: rgba(0, 0, 0, 0.525) 0px -50px 36px -28px inset;
 }
+.text_fill{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply bg-gradient-to-br from-white to-mainBg-300
+}

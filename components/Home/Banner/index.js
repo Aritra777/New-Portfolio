@@ -45,18 +45,19 @@ export default function Banner() {
   }, []);
 
   return (
-    <section className="text-black pt-20 md:pt-0 body-font h-screen grid place-items-center overflow-hidden">
-      <div className="container py-10 mx-auto text-center">
-        <div className="font-bold text-base xl:text-xl">
-          Hii, I am Aritra,
+    <section className="relative pt-20 md:pt-0 body-font h-screen grid place-items-center overflow-hidden">
+      <div className="h-full w-1/2 absolute top-0 left-0 bg-mainBg-800" ></div>
+      <div className="container py-10 mx-auto text-center z-40">
+        <div className="font-bold text-base xl:text-xl text_fill">
+         Hii, I am Aritra,
         </div>
-        <div ref={line1.ref} className="sm:text-4xl xl:text-9xl md:text-8xl text-3xl">
+        <div ref={line1.ref} className="sm:text-4xl xl:text-9xl md:text-8xl text-3xl text_fill">
           I&apos;m a
         </div>
-        <div ref={line2.ref} className="sm:text-4xl xl:text-9xl md:text-8xl text-3xl">
+        <div ref={line2.ref} className="sm:text-4xl xl:text-9xl md:text-8xl text-3xl text_fill ">
           <span ref={el}>Web Developer</span>
         </div>
-        <p className="text-gray-600 pt-8 md:text-xl leading-relaxed">
+        <p className="text-violate-300 pt-8 md:text-xl leading-relaxed">
             Building stuff in web | Making web more fast and interactive
           </p>
       </div>
