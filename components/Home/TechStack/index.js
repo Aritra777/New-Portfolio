@@ -131,7 +131,7 @@ function TechStack() {
               </div>
             );
           })}
-          <p className="w-full pt-6 text-xs md:text-sm text-center text-mainBg-300 " onClick={handleLength} >{stacklen == stacks.length ? "Show Less..." : "Show All..."}</p>
+          <p className="w-full pt-6 text-xs md:text-sm text-center text-mainBg-300 cursor-pointer" onClick={handleLength} >{stacklen == stacks.length ? "Show Less..." : "Show All..."}</p>
         </div>
       </div>
     </section>

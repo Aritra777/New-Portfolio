@@ -21,7 +21,7 @@ const projects = [
     subTitle: "Sub Title",
     description:
       "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
-    img_src: "/assets/target.png",
+    img_src: "/assets/Projects/target.png",
   },
   {
     title: "Title 2",
