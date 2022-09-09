@@ -57,13 +57,13 @@ function Work() {
         });
       }, []);
   return (
-    <div className="w-full h-[100vh] my-20 border border-black relative">
+    <div className="mx-auto w-full my-20 relative" id="work">
       <div className="w-full text-center py-12">
         <p className="sub_heading">Work</p>
         <p className="main_heading">Explore My work</p>
       </div>
     {/* <div className="absolute bottom-0 left-0 w-full h-1/2 swiper_shadow z-20" ></div> */}
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+      <Swiper navigation={true} modules={[Navigation]} className="">
         {projects.map((item, i) => {
             const {title , subTitle, description, img_src} = item
             return(

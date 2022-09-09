@@ -1,6 +1,7 @@
 import Script from "next/script";
 import React, { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import Link from 'next/link'
  
 function Navbar() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -27,16 +28,36 @@ function Navbar() {
       }`}>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a className="flex title-font font-medium items-center  mb-4 md:mb-0">
-          <span className="ml-3 text-xl">Tailblocks</span>
+          <span className="ml-3 text-xl">
+            <Link href="/" >
+            <a>
+              Aritra Biswas
+            </a>
+            </Link>
+            </span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+          <Link href="#about">
           <a className="mr-5 hover:text-gray-900">About</a>
+          </Link>
+          <Link href="#work">
           <a className="mr-5 hover:text-gray-900">Work</a>
+          </Link>
+          <Link href="#contact">
           <a className="mr-5 hover:text-gray-900">Contact</a>
+          </Link>
         </nav>
         <div className="flex text-xl gap-4">
+          <Link href="#" >
+          <a>
             <AiFillGithub />
+          </a>
+          </Link>
+          <Link href="#" >
+          <a>
             <AiFillLinkedin />
+          </a>
+          </Link>
         </div>
       </div>
     </div>

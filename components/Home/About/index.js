@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <div>
-      <section className="text-gray-600 body-font h-[100vh] w-full grid md:grid-cols-2 grid-cols-1">
+      <section id="about" className=" text-gray-600 body-font h-[100vh] w-full grid md:grid-cols-2 grid-cols-1">
         <div>
           <img
             src="#"

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    scroll-behavior: smooth;
+}
 .sub_heading{
     @apply text-2xl text-blue-600 font-extrabold 
 }

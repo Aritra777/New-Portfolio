@@ -1,5 +1,6 @@
-import { Button, Link } from "@mui/material";
+import { Button } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
+import Link from 'next/link'
 
 function Project_Card({ title, subTitle, description, img_src }) {
   const [showDetails, setShowDetails] = useState(false);
@@ -12,23 +13,18 @@ function Project_Card({ title, subTitle, description, img_src }) {
     detailsDiv.current.addEventListener("mouseout", () => {
       setShowDetails(false);
     });
-    // return () => {
-    //   detailsDiv.current.removeEventListener("mouseover", () => {
-    //     setShowDetails(false);
-    //   });
-    // };
   }, []);
 
   return (
-    <div className="p-10 h-full flex flex-col justify-center relative" ref={detailsDiv}>
+    <div className="p-10 h-[90vh] flex flex-col justify-center relative overflow-hidden" ref={detailsDiv}>
       <div className="w-full h-full absolute top-0 left-0 -z-20 bg-black/70"></div>
       <img
         src={img_src}
         alt="project_photo"
-        className="w-full h-full absolute top-0 left-0 -z-30"
+        className={` ${showDetails ? "scale-125" : "w-full h-full"} transition-all duration-500 absolute top-0 left-0 -z-30`}
       />
       <div
-        className={`flex flex-col gap-4 text-white z-10 ${showDetails ? "h-[45vh]" : "h-[18vh]" } transition-all duration-700 overflow-hidden`}
+        className={`flex flex-col gap-4 text-white z-10 ${showDetails ? "h-96" : "h-40" } transition-all duration-700 overflow-hidden`}
         
       >
         <p className={`md:text-8xl`}>{title}</p>
