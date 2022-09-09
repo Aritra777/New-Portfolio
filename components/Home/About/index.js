@@ -21,9 +21,9 @@ function About() {
             A Little About Myelf :
           </p>
           <p className="lg:text-lg text-sm md:max-w-4xl text-fadeText " data-aos="fade-left">
-            Hello, I'm Aritra Biswas. As you already know from my introductory
-            page, I'm a Full Stack Web Developer. But there is more of me to know
-            about. I'm a Indian from birth. It had been my dream to design to
+            Hello, I&apos;m Aritra Biswas. As you already know from my introductory
+            page, I&apos;m a Full Stack Web Developer. But there is more of me to know
+            about. I&apos;m a Indian from birth. It had been my dream to design to
             websites since I was a kid. Just kidding. Web Designing has been a
             recent compassion of mine, but by far, it is the one I most excell
             at. I always have a passion to build things.So, now, here I
