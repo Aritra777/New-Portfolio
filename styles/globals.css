@@ -6,10 +6,10 @@
     scroll-behavior: smooth;
 }
 .sub_heading{
-    @apply text-2xl text-blue-600 font-extrabold 
+    @apply text-2xl text-violate-300 font-extrabold 
 }
 .main_heading{
-    @apply text-6xl text-black font-extrabold
+    @apply text-6xl text-mainBg-300 font-extrabold
 }
 .swiper_shadow{
     box-shadow: rgba(0, 0, 0, 0.525) 0px -50px 36px -28px inset;

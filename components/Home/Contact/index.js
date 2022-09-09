@@ -30,22 +30,22 @@ function Contact() {
   
   return (
     <div>
-      <section id="contact" className="text-gray-600 body-font h-[100vh] w-full grid md:grid-cols-2 grid-cols-1">
+      <section id="contact" className="bg-mainBg-800 text-fadeText body-font h-[100vh] w-full grid md:grid-cols-2 grid-cols-1">
         <div className="grid place-items-center">
             <div className="space-y-8">
-          <p className="sub_heading">Contact</p>
-          <p className="main_heading">Want to go online?</p>
-          <p className="text-base text-gray-400 mt-4" >Send me a messege or you can email me at <br/> <Link href="mailto:aritrabiswas123.kulti@gmail.com" ><a> aritrabiswas123.kulti@gmail.com</a></Link> </p>
+          <p className="sub_heading" data-aos="fade-right">Contact</p>
+          <p className="main_heading" data-aos="fade-right">Want to go online?</p>
+          <p className="text-base text-fadeText mt-4" data-aos="fade-right">Send me a messege or you can email me at <br/> <Link href="mailto:aritrabiswas123.kulti@gmail.com" ><a> aritrabiswas123.kulti@gmail.com</a></Link> </p>
             </div>
         </div>
         <div className="flex justify-center md:pr-10 flex-col gap-4">
         {/* <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"> */}
-            <h2 className="text-gray-900 text-3xl mb-1 font-medium title-font">
-              Feedback
+            <h2 className="text-fadeText text-3xl mb-1 font-medium title-font">
+              Contact
             </h2>
             <form ref={form} onSubmit={sendEmail} >
             <div className="relative mb-4">
-              <label for="name" className="leading-7 text-sm text-gray-600">
+              <label htmlFor="name" className="leading-7 text-sm text-fadeText">
                 Name
               </label>
               <input
@@ -54,11 +54,12 @@ function Contact() {
                 name="name"
                 value={inputFields.name}
                 onChange={handleChange}
-                className="w-full bg-white rounded border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-mainBg-300 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                required
               />
             </div>
             <div className="relative mb-4">
-              <label for="email" className="leading-7 text-sm text-gray-600">
+              <label htmlFor="email" className="leading-7 text-sm text-fadeText">
                 Email
               </label>
               <input
@@ -67,11 +68,12 @@ function Contact() {
                 name="email"
                 value={inputFields.email}
                 onChange={handleChange}
-                className="w-full bg-white rounded border border-gray-300 focus:border-blue-600 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-mainBg-300 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                required
               />
             </div>
             <div className="relative mb-4">
-              <label for="message" className="leading-7 text-sm text-gray-600">
+              <label htmlFor="message" className="leading-7 text-sm text-fadeText">
                 Message
               </label>
               <textarea
@@ -80,9 +82,10 @@ function Contact() {
                 value={inputFields.message}
                 onChange={handleChange}
                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                required
               ></textarea>
             </div>
-            <button type='submit' className="text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg">
+            <button type='submit' className="text-white bg-mainBg-300  py-2 px-6 focus:outline-none hover:bg-mainBg-500 rounded text-lg">
               Submit
             </button>
             </form>

@@ -47,15 +47,15 @@ const projects = [
 ];
 
 function Work() {
-    useEffect(() => {
-        AOS.init({
-          duration : 2000,
-        //   anchorPlacement: "center-center",
-          startEvent:"Project_Card" ,
-        once: false
+    // useEffect(() => {
+    //     AOS.init({
+    //       duration : 2000,
+    //     //   anchorPlacement: "center-center",
+    //       startEvent:"Project_Card" ,
+    //     once: false
           
-        });
-      }, []);
+    //     });
+    //   }, []);
   return (
     <div className="mx-auto w-full my-20 relative" id="work">
       <div className="w-full text-center py-12">

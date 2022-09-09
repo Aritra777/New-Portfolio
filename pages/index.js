@@ -8,7 +8,7 @@ import Work from '../components/Home/Work'
 export default function Home() {
   return (
     <>
-    <div className='space-y-10'>
+    <div className='space-y-10 overflow-hidden'>
       <Banner />
       <About/>
       <Work/>

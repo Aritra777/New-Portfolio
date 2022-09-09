@@ -17,11 +17,11 @@ function Project_Card({ title, subTitle, description, img_src }) {
 
   return (
     <div className="p-10 h-[90vh] flex flex-col justify-center relative overflow-hidden" ref={detailsDiv}>
-      <div className="w-full h-full absolute top-0 left-0 -z-20 bg-black/70"></div>
+      <div className="w-full h-full absolute top-0 left-0 -z-20 bg-mainBg-800/70"></div>
       <img
         src={img_src}
         alt="project_photo"
-        className={` ${showDetails ? "scale-125" : "w-full h-full"} transition-all duration-500 absolute top-0 left-0 -z-30`}
+        className={` ${showDetails && "scale-125"} w-full h-ful transition-all duration-500 absolute top-0 left-0 -z-30`}
       />
       <div
         className={`flex flex-col gap-4 text-white z-10 ${showDetails ? "h-96" : "h-40" } transition-all duration-700 overflow-hidden`}
