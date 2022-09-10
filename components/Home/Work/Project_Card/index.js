@@ -41,7 +41,7 @@ function Project_Card({ title, subTitle, description, img_src, pLink, stackUsed 
                   <p className="flex gap-2" >
                     {stackUsed.map((stack, i) => {
                       return(
-                        <span className="md:px-3 md:py-2 p-2 md:text-base text-xs bg-mainBg-300/50 rounded-xl" >{stack}</span>
+                        <span key={i} className="md:px-3 md:py-2 p-2 md:text-base text-xs bg-mainBg-300/50 rounded-xl" >{stack}</span>
                       )
                     })}
                   </p>
