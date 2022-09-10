@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
-function Project_Card({ title, subTitle, description, img_src }) {
+function Project_Card({ title, subTitle, description, img_src, pLink, stackUsed }) {
   const [showDetails, setShowDetails] = useState(false);
   const detailsDiv = useRef(null);
 
@@ -16,8 +16,8 @@ function Project_Card({ title, subTitle, description, img_src }) {
   }, []);
 
   return (
-    <Link href="#">
-      <a>
+    <Link href={pLink ? pLink : "#"} target="_blank" >
+      <a target="_blank">
           <div
             className="md:p-10 p-2 md:h-[90vh] h-[50vh] flex flex-col justify-center relative overflow-hidden"
             ref={detailsDiv}
@@ -32,12 +32,19 @@ function Project_Card({ title, subTitle, description, img_src }) {
                   />
                 <div
                   className={`flex flex-col md:gap-4 gap-2 text-white z-10 ${
-                    showDetails ? "md:h-96 h-80" : "lg:h-40 md:h-32 h-20"
+                    showDetails ? "md:h-96" : "lg:h-40 md:h-32 h-60"
                   } transition-all duration-700 overflow-hidden`}
                 >
-                  <p className={`lg:text-8xl md:text-7xl text-3xl`}>{title}</p>
-                  <p className="lg:text-3xl md:text-4xl text-xl">{subTitle}</p>
+                  <p className={`lg:text-8xl md:text-7xl text-2xl`}>{title}</p>
+                  <p className="lg:text-3xl md:text-4xl text-base">{subTitle}</p>
                   <p className="lg:max-w-2xl md:text-xl text-sm">{description}</p>
+                  <p className="flex gap-2" >
+                    {stackUsed.map((stack, i) => {
+                      return(
+                        <span className="md:px-3 md:py-2 p-2 md:text-base text-xs bg-mainBg-300/50 rounded-xl" >{stack}</span>
+                      )
+                    })}
+                  </p>
                 </div>
           </div>
         </a>

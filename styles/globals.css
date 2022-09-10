@@ -9,7 +9,7 @@
     @apply text-lg md:text-xl lg:text-2xl text-violate-300 font-extrabold 
 }
 .main_heading{
-    @apply lg:text-6xl md:text-4xl text-2xl text-mainBg-300 font-extrabold
+    @apply lg:text-6xl md:text-4xl text-2xl font-extrabold text-mainBg-300
 }
 .swiper_shadow{
     box-shadow: rgba(0, 0, 0, 0.525) 0px -50px 36px -28px inset;
@@ -17,5 +17,5 @@
 .text_fill{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @apply bg-gradient-to-br from-white to-mainBg-300
+    @apply bg-gradient-to-br from-white to-mainBg-300 via-[#797cff]
 }

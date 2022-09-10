@@ -11,53 +11,63 @@ import "swiper/css/navigation";
 // import required modules
 import { Parallax, Pagination, Navigation } from "swiper";
 import Project_Card from "./Project_Card";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const projects = [
+  // {
+  //   title: "Title 1",
+  //   subTitle: "Sub Title",
+  //   description:
+  //     "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
+  //   img_src: "/assets/Projects/target.png",
+  //   pLink:"#"
+  // },
   {
-    title: "Title 1",
-    subTitle: "Sub Title",
+    title: "Breaking Copyright",
+    subTitle: "A website to manage musics",
     description:
-      "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
-    img_src: "/assets/Projects/target.png",
-  },
-  {
-    title: "Title 2",
-    subTitle: "Sub Title",
-    description:
-      "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
+      "Breaking Copyright is like a music lybrary where you have all types of musics at the same place. Here One can search music or sort music by their artist/category names.",
     img_src: "/assets/Projects/breaking.jpg",
+    pLink: "https://breakingcopyright.vercel.app/",
+    stackUsed: ["Next.js", "Tailwind CSS", "Strapi"],
   },
   {
-    title: "Title 3",
-    subTitle: "Sub Title",
+    title: "AECCC",
+    subTitle: "Event Management System",
     description:
-      "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
+      "This a website for our college coding club. Here a normal user can see upcoming events and can register in them and can also view info about the club. It has authetication, admin panel, sub_admin panel and many more features. ",
     img_src: "/assets/Projects/aeccc.jpg",
+    pLink: "https://testaeccc.web.app/",
+    stackUsed: ["React.js", "Express.js", "MongoDB"]
   },
   {
-    title: "Title 4",
-    subTitle: "Sub Title",
+    title: "Stem MicroSystem",
+    subTitle: "Website for Organisation",
     description:
-      "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
+      "This is a multipage website made in Next.js for frontend and strapi was used as CMS.",
     img_src: "/assets/Projects/stem.jpg",
+    pLink: "https://new-stem-microsystems-frontend.vercel.app/",
+    stackUsed: ["Next.js", "Tailwind CSS", "Strapi"],
   },
   {
-    title: "Title 5",
-    subTitle: "Sub Title",
+    title: "CMC Dealer",
+    subTitle: "",
     description:
-      "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
+      "A website for a car company where a you can view their various cars and their secification and choose on basis of your choice",
     img_src: "/assets/Projects/cmcdealer.jpg",
+    pLink: "https://cmcdealer.vercel.app/",
+    stackUsed: ["Next.js", "Tailwind CSS", "Strapi"],
   },
-  {
-    title: "Title 6",
-    subTitle: "Sub Title",
-    description:
-      "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
-    img_src: "/assets/Projects/agcars.jpg",
-  },
+  // {
+  //   title: "Title 6",
+  //   subTitle: "Sub Title",
+  //   description:
+  //     "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
+  //   img_src: "/assets/Projects/agcars.jpg",
+  //   pLink: "https://agcars-frontend.vercel.app/",
+  //   stackUsed: ["Next.js", "Tailwind CSS", "Strapi"],
+  // },
 ];
 
 function Work() {
@@ -69,12 +79,20 @@ function Work() {
       </div>
       <Swiper navigation={true} modules={[Navigation]} className="">
         {projects.map((item, i) => {
-            const {title , subTitle, description, img_src} = item
-            return(
-                <SwiperSlide key={i}>
-                    <Project_Card title={title} subTitle={subTitle} description={description} img_src={img_src} />
-                </SwiperSlide>
-            )
+          const { title, subTitle, description, img_src, pLink, stackUsed } = item;
+          console.log(pLink);
+          return (
+            <SwiperSlide key={i}>
+              <Project_Card
+                title={title}
+                subTitle={subTitle}
+                description={description}
+                img_src={img_src}
+                pLink={pLink}
+                stackUsed={stackUsed}
+              />
+            </SwiperSlide>
+          );
         })}
       </Swiper>
     </div>
