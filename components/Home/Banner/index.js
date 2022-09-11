@@ -47,11 +47,11 @@ export default function Banner() {
         <div className="font-bold text-base xl:text-xl text_fill">
          Hii, I am Aritra,
         </div>
-        <div ref={line1.ref} className="xl:text-9xl md:text-8xl sm:text-[4.5rem] text-5xl text_fill">
+        <div ref={line1.ref} className="xl:text-9xl md:text-8xl sm:text-[4.5rem] text-5xl md:w-full w-[92%] text_fill">
           I&apos;m a
         </div>
         <div ref={line2.ref} className="xl:text-9xl md:text-8xl sm:text-[4.5rem] text-5xl text_fill ">
-          <span ref={el}>Web Developer</span>
+          <span ref={el} className="font-sans" >Web Developer</span>
         </div>
         <p className="text-violate-300 pt-8 md:text-xl leading-relaxed">
             Building stuff in web | Making web more fast and interactive

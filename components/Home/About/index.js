@@ -18,7 +18,7 @@ function About() {
             About{" "}
           </p>
           <p className="main_heading mb-4" data-aos="fade-left">
-            A Little About Myelf :
+            A Little About Myself :
           </p>
           <p className="lg:text-lg text-sm md:max-w-4xl text-fadeText " data-aos="fade-left">
             Hello, I&apos;m Aritra Biswas. As you already know from my introductory

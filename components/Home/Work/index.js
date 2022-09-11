@@ -80,7 +80,6 @@ function Work() {
       <Swiper navigation={true} modules={[Navigation]} className="">
         {projects.map((item, i) => {
           const { title, subTitle, description, img_src, pLink, stackUsed } = item;
-          console.log(pLink);
           return (
             <SwiperSlide key={i}>
               <Project_Card

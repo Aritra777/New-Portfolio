@@ -17,12 +17,12 @@ function Navbar() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    
+    console.log("sc h : ", typeof window !== 'undefined' && screen.height);
 
   return (
     <>
     <div className={`py-2 fixed  left-0 right-0 top-0 z-[100000] transition-all duration-500 md:text-black text-violate-300 ${
-        typeof window !== 'undefined' && scrollPosition >= screen.height - 100
+        typeof window !== 'undefined' && scrollPosition >= screen.height - 550
           ? 'backdrop-blur-md bg-mainBg-800/70 md:text-violate-300 shadow-md top-0'
           : ' bg-transparent -top-1000'
       }`}>
