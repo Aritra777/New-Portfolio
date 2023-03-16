@@ -38,7 +38,7 @@ function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          // console.log(result.text);
           setLoader(false);
           setShowSubmitMsg({
             show: true,
@@ -68,7 +68,7 @@ function Contact() {
               status: "",
             });
           }, 3000);
-          console.log(error.text);
+          // console.log(error.text);
         }
       );
   };
