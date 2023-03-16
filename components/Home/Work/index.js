@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,20 +9,38 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Parallax, Pagination, Navigation } from "swiper";
+import { Navigation } from "swiper";
 import Project_Card from "./Project_Card";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const projects = [
-  // {
-  //   title: "Title 1",
-  //   subTitle: "Sub Title",
-  //   description:
-  //     "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
-  //   img_src: "/assets/Projects/target.png",
-  //   pLink:"#"
-  // },
+  {
+    title: "Tint and Orange",
+    subTitle: "Tint&Orange is one of India's best Car Care brands.",
+    description:
+      "Tint&Orange is one of India's best Car Care brands aiming to revolutionize the ways automobiles can be taken care of! The company was established in 2019 and is ISO 9001: 2015 certified.",
+    contributions:
+    `- Improved website speed by implementing Next.js, resulting in a 25% reduction in load time.
+- Streamlined user interface, resulting in a 40% decrease in bounce rate and a 15% increase in session duration.
+- Collaborated with design and content teams to develop 8+ dynamic pages, enhancing user engagement and website functionality.
+    `,
+    img_src: "/assets/Projects/Tintandorange_Website_FrontSC.png",
+    pLink:"https://www.tintandorange.com/",
+    stackUsed: ["Next.js", "Tailwind CSS", "Strapi"],
+  },
+//   {
+//     title: "T&O Dashboard",
+//     subTitle: "Management system for Tint and Orange",
+//     description:
+//       "Tint&Orange is one of India's best Car Care brands aiming to revolutionize the ways automobiles can be taken care of! The company was established in 2019 and is ISO 9001: 2015 certified.",
+//     contributions:
+//     `- Improved website speed by implementing Next.js, resulting in a 25% reduction in load time.
+// - Streamlined user interface, resulting in a 40% decrease in bounce rate and a 15% increase in session duration.
+// - Collaborated with design and content teams to develop 8+ dynamic pages, enhancing user engagement and website functionality.
+//     `,
+//     img_src: "/assets/Projects/Tintandorange_dashboard.png",
+//     pLink:"https://dashboard.tintandorange.com/",
+//     stackUsed: ["Next.js", "Tailwind CSS", "Strapi"],
+//   },
   {
     title: "Breaking Copyright",
     subTitle: "A website to manage musics",
@@ -37,6 +55,10 @@ const projects = [
     subTitle: "Event Management System",
     description:
       "This a website for our college coding club. Here a normal user can see upcoming events and can register in them and can also view info about the club. It has authetication, admin panel, sub_admin panel and many more features. ",
+    contributions: `- Manual authentication system for users to log in and access the site's features
+- User routes with different access levels, such as admin and sub-admin panels
+- An event registration system for users to sign up for upcoming events
+- Information pages about the college coding club and its activities` ,
     img_src: "/assets/Projects/aeccc.jpg",
     pLink: "https://testaeccc.web.app/",
     stackUsed: ["React.js", "Express.js", "MongoDB"]
@@ -59,15 +81,6 @@ const projects = [
     pLink: "https://cmcdealer.vercel.app/",
     stackUsed: ["Next.js", "Tailwind CSS", "Strapi"],
   },
-  // {
-  //   title: "Title 6",
-  //   subTitle: "Sub Title",
-  //   description:
-  //     "Ea adipisicing irure proident voluptate laborum nisi qui adipisicing do ullamco consectetur. Labore non minim sit et ea nostrud fugiat nulla. Laborum sit eu aliqua ipsum excepteur mollit officia elit elit. Cillum occaecat Lorem commodo nostrud et fugiat est.",
-  //   img_src: "/assets/Projects/agcars.jpg",
-  //   pLink: "https://agcars-frontend.vercel.app/",
-  //   stackUsed: ["Next.js", "Tailwind CSS", "Strapi"],
-  // },
 ];
 
 function Work() {
@@ -86,6 +99,7 @@ function Work() {
                 title={title}
                 subTitle={subTitle}
                 description={description}
+                contributions={item.contributions}
                 img_src={img_src}
                 pLink={pLink}
                 stackUsed={stackUsed}

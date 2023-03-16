@@ -1,23 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@200;300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@200;300&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-*{
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+@layer components {
+  .markdown_class ul {
+    list-style: revert;
+    padding: revert;
+    margin: revert;
+  }
 }
-.sub_heading{
-    @apply text-lg md:text-xl lg:text-2xl text-violate-300 font-extrabold 
+* {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
-.main_heading{
-    @apply lg:text-6xl md:text-4xl text-2xl font-extrabold text-mainBg-300
+.sub_heading {
+  @apply text-lg md:text-xl lg:text-2xl text-violate-300 font-extrabold;
 }
-.swiper_shadow{
-    box-shadow: rgba(0, 0, 0, 0.525) 0px -50px 36px -28px inset;
+.main_heading {
+  @apply lg:text-6xl md:text-4xl text-2xl font-extrabold text-mainBg-300;
 }
-.text_fill{
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    @apply bg-gradient-to-br from-white to-mainBg-300 via-[#797cff]
+.swiper_shadow {
+  box-shadow: rgba(0, 0, 0, 0.525) 0px -50px 36px -28px inset;
+}
+.text_fill {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @apply bg-gradient-to-br from-white to-mainBg-300 via-[#797cff];
 }
