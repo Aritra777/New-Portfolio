@@ -17,7 +17,7 @@ function Navbar() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    console.log("sc h : ", typeof window !== 'undefined' && screen.height);
+    // console.log("sc h : ", typeof window !== 'undefined' && screen.height);
 
   return (
     <>
